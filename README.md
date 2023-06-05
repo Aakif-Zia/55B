@@ -1,4 +1,4 @@
 ## TO RUN SERVER
 
-- `pnpm i`
-- `pnpm run dev`
+- `npm i`
+- `npm run dev`
