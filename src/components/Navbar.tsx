@@ -1,11 +1,9 @@
-import { useState } from "react";
-
 import LogoHeader from "../assets/logo-header.png";
 import Chevron from "../icons/Chevron";
 import MenuIcon from "../icons/MenuIcon";
 
 const Navbar = () => {
-  const [room, setRoom] = useState(false);
+  // const [room, setRoom] = useState(false);
 
   return (
     <nav className="flex justify-between items-center p-2 bg-slate-800">
