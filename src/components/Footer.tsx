@@ -6,7 +6,7 @@ import PhoneIcon from "../icons/PhoneIcon";
 
 const Footer = () => {
   return (
-    <section className="bg-slate-800 text-white">
+    <section className="bg-slate-900 text-white">
       <div className="flex flex-wrap justify-center items-center">
         <div className="flex justify-between items-start">
           <div className="p-8">
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="p-3 text-sm flex justify-center items-center font-semibold bg-rose-300 text-black">
+      <div className="p-3 text-sm flex justify-center items-center font-semibold bg-amber-100 text-black">
         &copy; 2016 55B Hotel All Rights Reserved.
       </div>
     </section>

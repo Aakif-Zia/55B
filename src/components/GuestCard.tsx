@@ -25,7 +25,7 @@ const GuestCard = () => {
   }, [current]);
 
   return (
-    <section className="p-4 h-64 flex justify-center items-center bg-slate-800 text-white">
+    <section className="p-4 h-64 flex justify-center items-center bg-slate-900 text-white">
       {guests.map((guest, index) => {
         return (
           <div

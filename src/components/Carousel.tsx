@@ -30,8 +30,8 @@ const Carousel = () => {
               }
             >
               <img className="object-cover" src={img.link} />
-              <div className="absolute inset-0 flex justify-center items-center bg-rose-100 bg-opacity-25">
-                <span className="text-xl md:text-2xl xl:text-4xl font-extrabold text-slate-800">
+              <div className="absolute inset-0 flex justify-center items-center ">
+                <span className="text-xl md:text-2xl xl:text-4xl font-extrabold text-white">
                   {img.text}
                 </span>
               </div>

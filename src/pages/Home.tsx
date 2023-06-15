@@ -1,6 +1,5 @@
 import Carousel from "../components/Carousel";
 
-import HowrahBridge from "../assets/bg-1.webp";
 import Building from "../assets/bg-2.jpg";
 import Breakfast from "../assets/breakfast.jpg";
 import RoomDeluxe from "../assets/room-deluxe.jpg";
@@ -39,69 +38,58 @@ const demandAmenities = [
   "Medical Aid for Emergency",
 ];
 
+const offers = [
+  { room: "Deluxe Room", offer: "10% off on weekdays" },
+  { room: "Standard Room", offer: "5% off on thursdays" },
+];
+
 const Home = () => {
-  // const [room, setRoom] = useState("");
-
-  // useEffect(() => {
-  //   const roomDiv = document.getElementById(room)?.classList;
-  //   roomDiv?.remove("bg-rose-300", "text-white");
-  //   roomDiv?.add("bg-rose-300", "text-white");
-  // }, [room]);
-
   return (
     <>
       <Carousel />
 
-      {/* <section className="absolute -mt-8 flex w-full justify-center z-50">
-        <div className="flex justify-between items-center w-4/5 h-16 gap-1 bg-slate-800 rounded-xl">
-          <div className="p-4 text-xs text-white font-extrabold">
-            BOOK A ROOM
-          </div>
-
-          <div className="p-4 flex flex-1 justify-between items-center text-white">
-            <div className="flex flex-1 items-center">
-              <div>
-                <label htmlFor="room" className="block text-xs font-medium">
-                  ROOM TYPE
-                </label>
-
-                <select
-                  name="room"
-                  id="room"
-                  value={room}
-                  onChange={(e) => setRoom(e.target.value)}
-                  className="mt-1.5 w-full rounded-lg text-slate-800"
-                >
-                  <option value="">SELECT ROOM</option>
-                  <option value="deluxe">DELUXE ROOM</option>
-                  <option value="standard">STANDARD ROOM</option>
-                </select>
+      <section className="px-4 pb-4 text-white bg-white">
+        <div className="p-4 m-4 rounded-xl text-slate-900 border border-slate-900">
+          <span className="text-xl font-extrabold">OFFERS</span>
+          {offers.map((offer, index) => {
+            return (
+              <div
+                key={index}
+                className="text-sm font-semibold p-4 bg-slate-900 m-2 rounded-xl text-white"
+              >
+                <span className="text-lg font-bold">{offer.offer}</span>
+                <p className="font-semibold text-right">{offer.room}</p>
               </div>
-            </div>
-
-            <div className="hidden sm:block rounded-lg px-4 py-2 bg-rose-200 hover:bg-rose-300">
-              <span className="font-bold text-black">Reserve Now</span>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      <section
-        className="px-4 pt-20 pb-4 text-white"
-        style={{ backgroundImage: `url(${HowrahBridge})` }}
-      >
-        <div className="bg-slate-800 p-4 m-4 rounded-xl">
-          <span className="text-xl font-extrabold">
-            UNMATCHED ACCOMMODATIONS
-          </span>
-          <p className="text-sm font-semibold p-2">
+            );
+          })}
+          {/* <p className="text-sm font-semibold p-2">
             Enjoy your stay in one of Kolkata’s best kept secrets, the guest
             house at 55B. Experience a homely and cozy feeling every time you
             step in. Pick the room of your choice from Deluxe and Non-deluxe
             options. Spacious rooms, premium fitments, modern convenience
             coupled with on-demand services ensure that you experience the best
             accommodation on a budget.
+          </p> */}
+        </div>
+
+        <div className="bg-slate-900 p-4 m-4 rounded-xl">
+          <span className="text-xl font-extrabold">
+            UNMATCHED ACCOMMODATIONS
+          </span>
+          <p className="text-sm font-semibold p-2">
+            55B offers tastefully decorated, 16 air-conditioned rooms offering
+            style and modern comfort coupled with advance amenities and
+            facilities in the room. Here, the rooms are categorized into Deluxe
+            and Standard offering style and modern comfort.
           </p>
+          {/* <p className="text-sm font-semibold p-2">
+            Enjoy your stay in one of Kolkata’s best kept secrets, the guest
+            house at 55B. Experience a homely and cozy feeling every time you
+            step in. Pick the room of your choice from Deluxe and Non-deluxe
+            options. Spacious rooms, premium fitments, modern convenience
+            coupled with on-demand services ensure that you experience the best
+            accommodation on a budget.
+          </p> */}
         </div>
 
         <div className="flex justify-evenly items-center flex-wrap gap-4 m-4">
@@ -109,14 +97,14 @@ const Home = () => {
             return (
               <div
                 key={index}
-                className="relative border-2 rounded-xl border-slate-800"
+                className="relative border-2 rounded-xl border-slate-900"
               >
                 <img
                   src={img.link}
                   className="object-cover rounded-xl sm:h-72"
                 />
                 <div className="p-4 rounded-xl absolute inset-0 flex flex-col justify-end items-start text-white bg-rose-100 bg-opacity-0 hover:bg-opacity-25">
-                  <div className="p-4 flex flex-col bg-slate-800 bg-opacity-40">
+                  <div className="p-4 flex flex-col bg-slate-900 bg-opacity-40">
                     <span className="text-xl font-bold">{img.text}</span>
                     <span className="text-lg font-semibold">{img.price}</span>
                   </div>
@@ -127,7 +115,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="p-8 flex justify-evenly items-center flex-wrap bg-slate-800 text-white">
+      <section className="p-8 flex justify-evenly items-center flex-wrap bg-slate-900 text-white">
         <div className="border rounded-xl border-white">
           <img src={Building} className="object-cover rounded-xl h-96" />
         </div>
@@ -155,7 +143,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="p-8 flex justify-evenly items-center flex-wrap text-slate-800 bg-white">
+      <section className="p-8 flex justify-evenly items-center flex-wrap text-slate-900 bg-white">
         <div className="p-4 lg:flex-1 text-sm">
           <div className="p-4 text-4xl font-bold">
             ULTRA MODERN AMENITIES & SERVICES
@@ -188,7 +176,7 @@ const Home = () => {
             })}
           </div>
         </div>
-        <div className="border rounded-xl border-slate-800">
+        <div className="border rounded-xl border-slate-900">
           <img src={Breakfast} className="object-cover rounded-xl h-96" />
         </div>
       </section>
@@ -198,7 +186,7 @@ const Home = () => {
       <section className="bg-white">
         <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold text-slate-800 sm:text-4xl">
+            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
               STATISTICS
             </h2>
           </div>
@@ -213,7 +201,7 @@ const Home = () => {
                   SATISFIED GUESTS
                 </dt>
 
-                <dd className="text-4xl font-extrabold text-slate-800 md:text-5xl">
+                <dd className="text-4xl font-extrabold text-slate-900 md:text-5xl">
                   16576
                 </dd>
               </div>
@@ -226,7 +214,7 @@ const Home = () => {
                   ROOMS BILLED
                 </dt>
 
-                <dd className="text-4xl font-extrabold text-slate-800 md:text-5xl">
+                <dd className="text-4xl font-extrabold text-slate-900 md:text-5xl">
                   7203
                 </dd>
               </div>
@@ -239,7 +227,7 @@ const Home = () => {
                   % OCCUPANCY
                 </dt>
 
-                <dd className="text-4xl font-extrabold text-slate-800 md:text-5xl">
+                <dd className="text-4xl font-extrabold text-slate-900 md:text-5xl">
                   90
                 </dd>
               </div>
@@ -251,7 +239,7 @@ const Home = () => {
                   MEALS SERVED
                 </dt>
 
-                <dd className="text-4xl font-extrabold text-slate-800 md:text-5xl">
+                <dd className="text-4xl font-extrabold text-slate-900 md:text-5xl">
                   25340
                 </dd>
               </div>
@@ -260,7 +248,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="p-8 flex flex-col justify-center items-center bg-slate-800 text-white">
+      <section className="p-8 flex flex-col justify-center items-center bg-slate-900 text-white">
         <span className="p-2 text-2xl">NEWS & OFFERS</span>
         <div className="flex flex-wrap justify-center items-center">
           <input
@@ -268,7 +256,7 @@ const Home = () => {
             className="w-64 border rounded-xl p-2 m-2 text-center"
             placeholder="EMAIL ADDRESS"
           />
-          <div className="rounded-lg px-4 py-2 m-2 bg-rose-200 hover:bg-rose-300">
+          <div className="rounded-lg px-4 py-2 m-2 bg-orange-200 hover:bg-amber-100">
             <span className="font-bold text-black">SIGN UP</span>
           </div>
         </div>
